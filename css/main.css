@@ -1,0 +1,22 @@
+
+div.table-responsive {
+  width: 80vw;
+}
+
+tbody {
+  display: block;
+  overflow: auto;
+  height: 5em;
+}
+
+td.name {
+  min-width: 12em;
+}
+
+td.town {
+  min-width: 12em;
+}
+
+td.state {
+  min-width: 12em;
+}
