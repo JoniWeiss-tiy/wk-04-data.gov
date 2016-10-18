@@ -3,20 +3,40 @@ div.table-responsive {
   width: 80vw;
 }
 
-tbody {
+thead {
+  display: block;
+  background-color: lightblue;
+}
+tr {
   display: block;
   overflow: auto;
   height: 5em;
 }
 
-td.name {
+td.name,
+th.name {
   min-width: 12em;
+  max-width: 12em;
 }
 
-td.town {
+td.town,
+th.town {
   min-width: 12em;
+  max-width: 12em;
+
 }
 
-td.state {
+td.state,
+th.state {
   min-width: 12em;
+  max-width: 12em;
+  word-wrap: break-word;
+}
+
+td.comments,
+th.comments {
+  /*width: 30em;*/
+  word-wrap: break-word;
+  min-width: 30em;
+  max-width: 30em;
 }
