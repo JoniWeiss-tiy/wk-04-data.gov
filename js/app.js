@@ -1,3 +1,4 @@
+console.log("Page loaded: ", document.title);
 let data_processing_module = (function () {
   const table = document.querySelector('#table-data');
 
@@ -36,6 +37,7 @@ let api_module = function() {
           data_processing_module.setData(response);
           return response;
         }).catch (function(err){
+          console.log("err: ", err);
        });
 };
 
