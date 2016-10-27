@@ -1,7 +1,12 @@
-
 div.table-responsive {
   width: 80vw;
 }
+
+div.search-box {
+  margin: 2em auto;
+  width: 60vw;
+}
+
 
 thead {
   display: block;
