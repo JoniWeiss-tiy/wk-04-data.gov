@@ -45,7 +45,8 @@ let data_processing_module = (function () {
     }
     stObj = stateLookup.find(function(st) {
       if (st.abbr === str ||
-          st.state.toLowerCase() === str) {
+          st.state.toLowerCase() === str ||
+          st.state.toLowerCase().includes(str)) {
             return { state: st.state, stAbbr: st.abbr };
       }
     });
