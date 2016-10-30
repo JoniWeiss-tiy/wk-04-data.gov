@@ -43,7 +43,7 @@ let data_processing_module = (function () {
     } else {
       str = str.toLowerCase();
     }
-    stObj = stateLookup.find(function(st) {
+    stObj = stateLookup.filter(function(st) {
       if (st.abbr === str ||
           st.state.toLowerCase() === str ||
           st.state.toLowerCase().includes(str)) {
@@ -63,13 +63,19 @@ let data_processing_module = (function () {
       data.map(genTableRows);
       return false;
     } else { // match input with state info
-      let { state , abbr } = matchInput(userInput);
 
+      let stObj = matchInput(userInput);
       data.filter(function(row) {
-        if (row.state_or_country === state ||
-            row.state_or_country === abbr ) {
-          return row;
-        };
+
+        for (var props in stObj) {
+
+          if (row.state_or_country === stObj[props].state ||
+            row.state_or_country === stObj[props].abbr ) {
+              return row;
+          };
+
+        }
+
       }).map(genTableRows);
     }
   };
