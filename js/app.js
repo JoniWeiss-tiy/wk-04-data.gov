@@ -47,7 +47,7 @@ let data_processing_module = (function () {
       if (st.abbr === str ||
           st.state.toLowerCase() === str ||
           st.state.toLowerCase().includes(str)) {
-            return { state: st.state, stAbbr: st.abbr };
+            return { state: st.state, abbr: st.abbr };
       }
     });
     console.log('stObj: ', stObj);
